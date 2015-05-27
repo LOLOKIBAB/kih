@@ -1,7 +1,7 @@
 %% 
 clc;
 clear;
-%% задание 1
+%% task 1
 N=23;
 f=0.3;
 fs=1024;
@@ -21,4 +21,4 @@ figure;
 freqz(fun);
 figure;
 impz(fun);
-%% задание 2
+%% task 2
