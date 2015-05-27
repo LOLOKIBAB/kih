@@ -7,18 +7,18 @@ f=0.3;
 fs=1024;
 
 window = rectwin(N);
-fun = fir1(N-1,f,window);
-W = 0:1/fs:(fs-1)/fs;
-H = zeros(fs,1);
-H(1:f*fs+1) = 1;
+fun = fir1(N-1,f,win);
+idealW = 0:1/fs:(fs-1)/fs;
+idealH = zeros(fs,1);
+idealH(1:f*fs+1) = 1;
 figure;
-plot(W, H);
+plot(idealW, idealH);
 grid on;
 hold on;
 [h,w] = freqz(fun);
 plot(w/pi,abs(h));
+
 figure;
 freqz(fun);
 figure;
-impz(fun);
-%% задание 2
+zplane(fun);
